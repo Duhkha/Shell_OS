@@ -1,11 +1,12 @@
 # **DarkShell**
 
-DarkShell is a simple implementation of shell in C. It has some basic functionalities like parsing(tokenizing) the input,piping and running built-in programs or external programs.
+DarkShell is a simple implementation of shell in C. It has some basic functionalities like parsing (tokenizing) the input, piping and running built-in programs or external programs.
 
 
 # **Compiling:**
 
 To compile this shell you will need to install readline library if you don't already have one:
+
 sudo apt-get install libreadline-dev
 
 Clone this repository and use a C compiler to compile the program in order to execute it. Here are the instructions to compile:
@@ -21,27 +22,46 @@ After the program has started, you can begin issuing instructions.
 # **Outline**
 
 1.DarkShell can perform the following commands:
+
 ls
+
 cd
+
 cp
+
 history:
-  [-r] - prints out history in reverse
+
+[-r] - prints out history in reverse
+
 fortune:
-  [-a] - prints out all the quotes
+
+[-a] - prints out all the quotes
+
 free:
-  [-b] - prints out memory in bytes
-  [-m] - prints out memory in megabytes
-  [-g] - prints out memory in gigabytes
+
+[-b] - prints out memory in bytes
+
+[-m] - prints out memory in megabytes
+
+[-g] - prints out memory in gigabytes
+
 exit
 
 2.DarkShell also can run other external programs and can perform piping
+
 3.System calls:
-    fork()
-    wait()
-    exec()
-    rfork()
-    execle()
-    forkbomb()
+
+fork()
+
+wait()
+
+exec()
+
+rfork()
+
+execle()
+
+forkbomb()
 
 # **Challenges:**
 
