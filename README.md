@@ -1,6 +1,6 @@
 # **DarkShell**
 
-DarkShell is a simple implementation of shell in C. It has some basic functionalities like parsing (tokenizing) the input, piping and running built-in programs or external programs.
+DarkShell is a simple implementation of shell in C. It has some basic functionalities like parsing (tokenizing) the input, piping and running built-in programs or external programs. There is also a little C program called syscall in which we demonstrated how some basic system calls are used.
 
 
 # **Compiling:**
@@ -18,6 +18,11 @@ Then, carry out the following instruction to start the program:
 ./shell
 
 After the program has started, you can begin issuing instructions.
+
+For system calls it goes the similar way:
+
+1. gcc -Wall -o syscall syscall.c
+2. ./syscall
 
 # **Outline**
 
@@ -59,7 +64,7 @@ exec()
 
 rfork()
 
-execle()
+execlp()
 
 forkbomb()
 
