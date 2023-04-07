@@ -1,12 +1,16 @@
-#  **Shell software:**
+# **DarkShell**
 
-This is a straightforward shell application with command execution capabilities and some built-in commands. This C-coded software has undergone testing on a Linux operating system.
+DarkShell is a simple implementation of shell in C. It has some basic functionalities like parsing(tokenizing) the input,piping and running built-in programs or external programs.
 
-# **Getting Started:**
+
+# **Compiling:**
+
+To compile this shell you will need to install readline library if you don't already have one:
+sudo apt-get install libreadline-dev
 
 Clone this repository and use a C compiler to compile the program in order to execute it. Here are the instructions to compile:
 
-gcc –o shell –shell.c –lreadline
+gcc -Wall shell.c -o shell -lreadline
 
 Then, carry out the following instruction to start the program:
 
@@ -14,42 +18,36 @@ Then, carry out the following instruction to start the program:
 
 After the program has started, you can begin issuing instructions.
 
-# **Usage:**
+# **Outline**
 
-Along with the built-in commands below, this shell program can perform commands.
+1.DarkShell can perform the following commands:
+ls
+cd
+cp
+history:
+  [-r] - prints out history in reverse
+fortune:
+  [-a] - prints out all the quotes
+free:
+  [-b] - prints out memory in bytes
+  [-m] - prints out memory in megabytes
+  [-g] - prints out memory in gigabytes
+exit
 
-Change location with cd
-
-Exit: close the terminal application
-
-help: show assistance data
-
-copying a file (cp) 
-
-History: show the command history 
-
-Fortune: show a free random quotation 
-
-Make a fork weapon with "forkbomb": crashing PC using fork()
-
-Use Shell Part to get the following help command:
-
-offers a list of all possible commands under "help"
-
-help [command] - explains how to use the specified command
-
-Simply type the instruction into the shell prompt and hit enter to run it.
+2.DarkShell also can run other external programs and can perform piping
+3.System calls:
+    fork()
+    wait()
+    exec()
+    rfork()
+    execle()
+    forkbomb()
 
 # **Challenges:**
 
 Implementing pipes and knowing how to write a shell in C.   
 Implementing the free command required using particular, unknown C functions.   
 Complexity issues occasionally arise with our built-in commands.
-
-
-
-
-
 
 # **Resources:**
 
@@ -63,19 +61,6 @@ https://stackoverflow.com/questions/349889/how-do-you-determine-the-amount-of-li
 https://www.theurbanpenguin.com/4184-2/   
 https://stackoverflow.com/questions/20974717/why-does-read-have-to-be-a-system-call-run-in-kernel-mode
 
-# **Project documents submitted:**
-
-
-
-
-
-
-
-# **Built With:**
-
-[Linux](https://www.linux.org/)
-
-[C](https://www.programiz.com/c-programming)
 
 ## **Authors/contacts:**
 
@@ -83,6 +68,11 @@ Merima Maksumic   merima.maksumic@stu.ibu.edu.ba
 
 Ismar kovacevic   ismar.kovacevic@stu.ibu.edu.ba
 
+
+# **Warning**
+Using arrow keys to search for previous commands is enabled but it does result in prompt getting erased. We didn't have time to fix that. Reasons for that might be becuase of our way of printing out the prompt. Possible solution snprintf(). 
+
+Also if we had more time we would implement redirecting, which we did use in our previous version of this shell. In this version we focused more on piping.
 
 
 
